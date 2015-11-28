@@ -3,4 +3,5 @@ Moeda: <%= @country.currency %> <br>
 Idioma: <%= @country.language %> <br>
 Capital: <%= @country.capital %> <br>
 Ponto Turístico: <%= @country.point_of_interest %> <br>
-Custo: <%= "$" * @country.cost %>
+Custo: <%= "$" * @country.cost %> <br>
+<%= link_to "Editar", edit_country_path(@country) %>

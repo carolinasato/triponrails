@@ -1,0 +1,13 @@
+<%= form_for @country do |f| %>
+<label> Nome:<%=f.text_field :name %> </label> <br>
+<label> Moeda:<%=f.text_field :currency %> </label> <br>
+<label> Idioma:<%=f.text_field :language %> </label> <br>
+<label> Capital:<%=f.text_field :capital %> </label> <br>
+<label> Ponto Turístico:<%=f.text_field :point_of_interest %> </label> <br>
+Custo:
+<% 1.upto(5) do |n| %>
+<label> <%= f.radio_button :cost,n %> <%= "$" * n %> </label>
+<%end%> <br>
+
+<%= f.submit %>
+<%end%>
