@@ -1,4 +1,4 @@
-Olá mundo!
+<h1> Bem vindos ao Trip on Rails!</h1>
 <ul>
 <% @countries.each do |country| %>
 <li>
@@ -6,3 +6,5 @@ Olá mundo!
 </li>
 	<% end %>
 </ul>
+
+<%= link_to "Incluir novo país", new_country_path %>
