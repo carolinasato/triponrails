@@ -5,3 +5,18 @@ Capital: <%= @country.capital %> <br>
 Ponto Turístico: <%= @country.point_of_interest %> <br>
 Custo: <%= "$" * @country.cost %> <br>
 <%= link_to "Editar", edit_country_path(@country) %>
+<br>
+<%= form_for [@country, Comment.new] do |f| %>
+Autor: <%= f.text_field :author %>
+<br> Comentario: <%= f.text_area :text %>
+<br>
+<%= f.submit %>
+<% end %> 
+<br>Comentarios:
+<br>
+<% @country.comments.each do |comment| %>
+        Autor: <%= comment.author %>
+        <br>Comentario: <%= comment.text %>
+        <br>
+<% end %>
+
